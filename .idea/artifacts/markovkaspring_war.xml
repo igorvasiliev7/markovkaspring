@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="markovkaspring:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="markovka-spring-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="markovkaspring:war exploded" />
+    </root>
+  </artifact>
+</component>
