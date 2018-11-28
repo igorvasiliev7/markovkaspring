@@ -28,24 +28,24 @@ public class Client {
     private int card;
 //TODO check constructors list
 
-    public Client(long id, String phone, String name, String status, int card) {
-        this.id = id;
-        this.phone = phone;
-        this.name = name;
-        this.status = status;
-        this.card = card;
-    }
+//    public Client(long id,  String name, String phone, String status, int card) {
+//        this.id = id;
+//        this.phone = phone;
+//        this.name = name;
+//        this.status = status;
+//        this.card = card;
+//    }
+//
+//    public Client(String name, String phone, String status, int card) {
+//        this.name = name;
+//        this.phone = phone;
+//        this.status = status;
+//        this.card = card;
+//    }
 
-    public Client(String name, String phone, String status, int card) {
-        this.phone = phone;
-        this.name = name;
-        this.status = status;
-        this.card = card;
-    }
-
-    public Client(String name, String phone, String status) {
-        this.phone = phone;
-        this.name = name;
-        this.status = status;
-    }
+//    public Client(String name, String phone, String status) {
+//        this.phone = phone;
+//        this.name = name;
+//        this.status = status;
+//    }
 }

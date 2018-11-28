@@ -8,7 +8,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 public class ClientDTO {
-    private int number;
     private long clientId;
     private String clientName;
     private String clientPhone;
@@ -19,27 +18,27 @@ public class ClientDTO {
     private String visitDate;
     private int visitsSum;
 
-    public ClientDTO(int number) {
-        this.number = number;
-    }
-
-    public ClientDTO(int number, String lastCallDate, String comment) {
-        this.number = number;
+    public ClientDTO(long clientId, String clientName, String clientPhone, String clientStatus, int card, String lastCallDate, String comment, String visitDate, int visitsSum) {
+        this.clientId = clientId;
+        this.clientName = clientName;
+        this.clientPhone = clientPhone;
+        this.clientStatus = clientStatus;
+        this.card = card;
         this.lastCallDate = lastCallDate;
         this.comment = comment;
+        this.visitDate = visitDate;
+        this.visitsSum = visitsSum;
     }
 
     @Override
     public String toString() {
-        return  number +";"+
-                clientName +";"+
+        return  clientName +";"+
                 clientPhone + ";"+
                 clientStatus + ";"+
                 card +";"+
                 visitDate +";"+
                 visitsSum +";"+
                 lastCallDate +";"+
-                comment
-        ;
+                comment;
     }
 }
