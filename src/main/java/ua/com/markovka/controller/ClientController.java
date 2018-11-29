@@ -29,8 +29,12 @@ public class ClientController {
     }
 
     @GetMapping("/findAllDto")
-    public ResponseEntity<List<ClientDTO>> findAllDto(){
+    public ResponseEntity<List<Object[]>> findAllDto(){
         return new ResponseEntity<>(clientRepository.findAllDto(),HttpStatus.OK);
+    }
+    @GetMapping("/findByStatusDto/{status}")
+    public ResponseEntity<List<Object[]>> findByStatusDto(@PathVariable ("status") String status){
+        return new ResponseEntity<>(clientRepository.findByStatusDto(status),HttpStatus.OK);
     }
 
     @PostMapping
