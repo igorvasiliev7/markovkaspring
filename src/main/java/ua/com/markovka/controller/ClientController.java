@@ -4,12 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import ua.com.markovka.model.Client;
-import ua.com.markovka.model.ClientDTO;
 import ua.com.markovka.repositories.ClientRepository;
-
-import javax.persistence.Tuple;
 import java.util.List;
 
 @RestController
