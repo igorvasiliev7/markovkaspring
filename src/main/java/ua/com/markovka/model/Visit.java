@@ -24,6 +24,8 @@ public class Visit {
     private String date;
     @Column(name = "amount")
     private int amount;
+    @Column (name = "master")
+    private String master;
 
     public Visit(long clientId, String date, int amount) {
         this.clientId = clientId;
