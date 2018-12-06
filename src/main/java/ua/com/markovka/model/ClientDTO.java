@@ -17,8 +17,9 @@ public class ClientDTO {
     private String comment;
     private String visitDate;
     private int visitsSum;
+    private String master;
 
-    public ClientDTO(long clientId, String clientName, String clientPhone, String clientStatus, int card, String lastCallDate, String comment, String visitDate, int visitsSum) {
+    public ClientDTO(long clientId, String clientName, String clientPhone, String clientStatus, int card, String lastCallDate, String comment, String visitDate, int visitsSum, String master) {
         this.clientId = clientId;
         this.clientName = clientName;
         this.clientPhone = clientPhone;
@@ -28,6 +29,7 @@ public class ClientDTO {
         this.comment = comment;
         this.visitDate = visitDate;
         this.visitsSum = visitsSum;
+        this.master = master;
     }
 
     @Override

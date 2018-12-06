@@ -16,14 +16,14 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
     Client findByPhone(String phone);
 
 
-    @Query(value = "SELECT cl.id, cl.name, cl.phone, cl.status, cl.card, ca_date, ca.comment, vi_date, vi_sum from clients cl LEFT JOIN " +
+    @Query(value = "SELECT cl.id, cl.name, cl.phone, cl.status, cl.card, ca_date, ca.comment, vi_date, vi_sum, vi_master from clients cl LEFT JOIN " +
             "(SELECT client_id, Max(date) as ca_date, comment FROM calls GROUP BY client_id) as ca ON ca.client_id=cl.id JOIN " +
-            "(SELECT client_id, Max(date) as vi_date, SUM(amount) as vi_sum FROM visits GROUP BY client_id) AS vi ON vi.client_id=cl.id", nativeQuery = true)
+            "(SELECT client_id, Max(date) as vi_date, SUM(amount) as vi_sum, master as vi_master FROM visits GROUP BY client_id) AS vi ON vi.client_id=cl.id", nativeQuery = true)
     List<Object[]> findAllDto();
 
-    @Query(value = "SELECT cl.id, cl.name, cl.phone, cl.status, cl.card, ca_date, ca.comment, vi_date, vi_sum from clients cl LEFT JOIN " +
+    @Query(value = "SELECT cl.id, cl.name, cl.phone, cl.status, cl.card, ca_date, ca.comment, vi_date, vi_sum, vi_master from clients cl LEFT JOIN " +
             "(SELECT client_id, Max(date) as ca_date, comment FROM calls GROUP BY client_id) as ca ON ca.client_id=cl.id JOIN " +
-            "(SELECT client_id, Max(date) as vi_date, SUM(amount) as vi_sum FROM visits GROUP BY client_id) AS vi ON vi.client_id=cl.id WHERE cl.status = :status", nativeQuery = true)
+            "(SELECT client_id, Max(date) as vi_date, SUM(amount) as vi_sum, master as vi_master FROM visits GROUP BY client_id) AS vi ON vi.client_id=cl.id WHERE cl.status = :status", nativeQuery = true)
     List<Object[]> findByStatusDto(@Param("status") String status);
 
 //    @Query("SELECT new ua.com.markovka.model.ClientDTO(cl.id, cl.name, cl.phone, cl.status, cl.card, ca_date, ca.comment, vi_date, vi_sum) from Client cl LEFT JOIN (SELECT client_id, date as ca_date, comment as com FROM calls GROUP BY client_id) as ca ON ca.client_id=cl.id JOIN " +

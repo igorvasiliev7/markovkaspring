@@ -44,7 +44,8 @@ public class ClientController {
                     objects[5].toString(),
                     objects[6].toString(),
                     objects[7].toString(),
-                    Integer.parseInt(objects[8].toString())
+                    Integer.parseInt(objects[8].toString()),
+                    objects[9].toString()
             );
             clients.add(client);
         }
@@ -67,7 +68,8 @@ public class ClientController {
                     objects[5].toString(),
                     objects[6].toString(),
                     objects[7].toString(),
-              Integer.parseInt(objects[8].toString())
+              Integer.parseInt(objects[8].toString()),
+                    objects[9].toString()
             );
             clients.add(client);
         }

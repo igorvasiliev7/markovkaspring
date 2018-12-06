@@ -27,9 +27,10 @@ public class Visit {
     @Column (name = "master")
     private String master;
 
-    public Visit(long clientId, String date, int amount) {
+    public Visit(long clientId, String date, int amount, String master) {
         this.clientId = clientId;
         this.date = date;
         this.amount = amount;
+        this.master = master;
     }
 }
