@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginController {
-//
+
 //    @RequestMapping("/")
 //    public String home() {
 //        return "home";
@@ -17,7 +17,7 @@ public class LoginController {
 //        return "hello";
 //    }
 
-//    @RequestMapping("/login")
+//    @RequestMapping("/api/login")
 //    public String login() {
 //        return "login";
 //    }
